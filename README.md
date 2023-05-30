@@ -27,6 +27,19 @@ class SLL:
         np.data=data
         np.next=temp.next
         temp.next=np
+        
+   def sort(self):
+        if self.head is None:
+            return 
+        else:
+            curr=self.head
+            while curr:
+                temp=curr.next
+                while temp:
+                    if curr.data>temp.data:
+                        curr.data,temp.data=temp.data,curr.data
+                    temp=temp.next
+                curr=curr.next
     
    def Display(self):
         if self.head is None:
